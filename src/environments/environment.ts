@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   direccionurl : 'http://www.omdbapi.com/',
-  apiKey : '57dd2d56' // <-- Api que viene del servicio!
-  //http://www.omdbapi.com/?i=tt3896198&apikey=57dd2d56
+  apiKey : '57dd2d56', // <-- Api que viene del servicio! http://www.omdbapi.com/?i=tt3896198&apikey=57dd2d56
+  imagenpopup_uno : '../../../../assets/img/50500.png'
 };
 
 /*
