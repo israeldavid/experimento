@@ -8,8 +8,6 @@ import { SearchType}  from '../enums/SearchType.enum';
 const url = environment.direccionurl;
 const api = environment.apiKey;
 
-
-
 @Injectable({
   providedIn: 'root'
 })
