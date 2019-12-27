@@ -2,9 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import {environment} from '../../../environments/environment';
 
-// Typescript personalizar Enum para tipos de busqueda (optional)
-//http://www.omdbapi.com/?i=tt3896198&apikey=57dd2d56
+const url = environment.direccionurl;
+const api = environment.apiKey;
+
 export enum SearchType {
   all = '',
   movie = 'movie',
@@ -12,22 +14,21 @@ export enum SearchType {
   episode = 'episode'
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
-  url = 'http://www.omdbapi.com/';
-  apiKey = '57dd2d56'; // <-- Api que viene del servicio!
-  //http://www.omdbapi.com/?i=tt3896198&apikey=57dd2d56
+  
   constructor(private httpService: HttpClient) { }
 
   searchData(title: string, type: SearchType): Observable<any> {
-    return this.httpService.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`).pipe(
+    return this.httpService.get(`${url}?s=${encodeURI(title)}&type=${type}&apikey=${api}`).pipe(
       map(results => results['Search'])
     );
   }
 
   getDetails(id) {
-    return this.httpService.get(`${this.url}?i=${id}&plot=full&apikey=${this.apiKey}`);
+    return this.httpService.get(`${url}?i=${id}&plot=full&apikey=${api}`);
   }
 }
