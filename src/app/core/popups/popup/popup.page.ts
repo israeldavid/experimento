@@ -11,7 +11,7 @@ export class PopupPage implements OnInit {
 
   constructor(private mdlCtr:ModalController) { }
 
-  demo : string = environment.imagenpopup_uno;
+  imagePromocional : string = environment.imagenpopup_uno;
 
   ngOnInit() {
   }

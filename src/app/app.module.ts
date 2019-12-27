@@ -10,6 +10,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 // para usar el servicio
 import { HttpClientModule } from '@angular/common/http';
+//para usar el interceptor
+import { HTTP_INTERCEPTORS} from '@angular/common/http';
+import { HttpConfigInterceptor } from '../app/core/interceptors/httpConfig.interceptor';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -17,7 +21,12 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpConfigInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

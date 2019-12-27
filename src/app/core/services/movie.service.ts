@@ -5,6 +5,7 @@ import { environment} from '../../../environments/environment';
 import { Imovie } from '../interfaces/movies.interface';
 import { SearchType}  from '../enums/SearchType.enum';
 
+
 const url = environment.direccionurl;
 const api = environment.apiKey;
 
