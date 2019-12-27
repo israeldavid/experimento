@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService, SearchType } from '../../core/services/movie.service';  //Importo el servicio y el Enum
 import { Observable } from 'rxjs';
+import { Imovie} from '../../core/interfaces/movies.interface';
 
 @Component({
   selector: 'app-movies',
@@ -10,7 +11,7 @@ import { Observable } from 'rxjs';
 
 export class MoviesPage implements OnInit {
   //declaro las variables que usare.
-  results: Observable<any>;  //variable results de tipo observable
+  results: Observable<Imovie>;  //variable results de tipo observable
   searchTerm: string = '';  //variable searchterm de tipo string
   type: SearchType = SearchType.all;  //variable type de tipo importado arriba del ENUM SearchType que es igual al elemento del enum all
 
