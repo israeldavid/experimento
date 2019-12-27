@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-popup',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopupPage implements OnInit {
 
-  constructor() { }
+  constructor(private mdlCtr:ModalController) { }
 
   ngOnInit() {
   }
 
+  cerrar(){
+    this.mdlCtr.dismiss();
+  }
 }

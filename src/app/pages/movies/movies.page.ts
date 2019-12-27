@@ -4,7 +4,10 @@ import { Observable, from } from 'rxjs';
 import { Imovie} from '../../core/interfaces/movies.interface';
 import { SearchType } from '../../core/enums/SearchType.enum';
 import { ModalController } from '@ionic/angular';
-import { PopupPage} from '../popup/popup.page';
+import { PopupPage} from '../../core/popups/popup/popup.page';
+//animaciones
+import { iRouteEnterAnimation } from '../../shared/animations/enter';
+import { iRouteLeaveAnimation } from '../../shared/animations/leave';
 
 @Component({
   selector: 'app-movies',
@@ -21,6 +24,7 @@ export class MoviesPage implements OnInit {
   constructor(private movieService: MovieService, private mdlCtr:ModalController) { } //para poder usar el servicio lo instancio
 
   ngOnInit() {
+    this.presentModal();
   }
 
   //la funcion de busqueda
@@ -31,7 +35,9 @@ export class MoviesPage implements OnInit {
 
   async presentModal() {
     const modal = await this.mdlCtr.create({
-      component: PopupPage
+      component: PopupPage,
+      enterAnimation: iRouteEnterAnimation,
+      leaveAnimation: iRouteLeaveAnimation
     });
     await modal.present();
   }
