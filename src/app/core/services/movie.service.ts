@@ -1,19 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment} from '../../../environments/environment';
 import { Imovie } from '../interfaces/movies.interface';
+import { SearchType}  from '../enums/SearchType.enum';
 
 const url = environment.direccionurl;
 const api = environment.apiKey;
 
-export enum SearchType {
-  all = '',
-  movie = 'movie',
-  series = 'series',
-  episode = 'episode'
-}
 
 
 @Injectable({

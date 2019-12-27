@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService, SearchType } from '../../core/services/movie.service';  //Importo el servicio y el Enum
+import { MovieService} from '../../core/services/movie.service';  //Importo el servicio y el Enum
 import { Observable } from 'rxjs';
 import { Imovie} from '../../core/interfaces/movies.interface';
+import { SearchType } from '../../core/enums/SearchType.enum';
 
 @Component({
   selector: 'app-movies',
