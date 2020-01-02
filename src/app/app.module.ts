@@ -13,11 +13,13 @@ import { HttpClientModule } from '@angular/common/http';
 //para usar el interceptor
 import { HTTP_INTERCEPTORS} from '@angular/common/http';
 import { HttpConfigInterceptor } from '../app/core/interceptors/httpConfig.interceptor';
+//Para usar el modulo de autenticación
+import { AuthModule } from '../app/core/authentication/auth.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule,AuthModule],
   providers: [
     StatusBar,
     SplashScreen,
