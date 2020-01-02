@@ -8,7 +8,8 @@ const routes: Routes = [
   {
     path: 'movies',
     loadChildren: () => import('./pages/movies/movies.module').then( m => m.MoviesPageModule),
-    canActivate: [AuthGuardService]
+    //en la pagina que quieres proteger pones los guards como abajo
+    //canActivate: [AuthGuardService]
   },
   {
     path: 'movie-details/:id',
