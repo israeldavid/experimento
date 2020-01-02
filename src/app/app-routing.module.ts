@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from "../app/core/guards/auth-guard.service";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./pages/movies/movies.module').then( m => m.MoviesPageModule)},
   {
     path: 'movies',
-    loadChildren: () => import('./pages/movies/movies.module').then( m => m.MoviesPageModule)
+    loadChildren: () => import('./pages/movies/movies.module').then( m => m.MoviesPageModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'movie-details/:id',
@@ -19,6 +21,14 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'parametros',
+    loadChildren: () => import('./pages/parametros/parametros.module').then( m => m.ParametrosPageModule)
+  },
+  {
+    path: 'parametros-detalles/:id',
+    loadChildren: () => import('./pages/parametros-detalles/parametros-detalles.module').then( m => m.ParametrosDetallesPageModule)
   },
 ];
 
