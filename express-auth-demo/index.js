@@ -6,6 +6,9 @@ const  sqlite3  =  require('sqlite3').verbose();
 const  jwt  =  require('jsonwebtoken');
 const  bcrypt  =  require('bcryptjs');
 
+
+//npm serve para iniciar ek servidor 
+
 const SECRET_KEY = "secretkey23456";
 
 const  app  =  express();
