@@ -4,7 +4,7 @@ import { AuthGuardService } from "../app/core/guards/auth-guard.service";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./pages/movies/movies.module').then( m => m.MoviesPageModule)},
+  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
     path: 'movies',
     loadChildren: () => import('./pages/movies/movies.module').then( m => m.MoviesPageModule),
@@ -30,6 +30,22 @@ const routes: Routes = [
   {
     path: 'parametros-detalles/:id',
     loadChildren: () => import('./pages/parametros-detalles/parametros-detalles.module').then( m => m.ParametrosDetallesPageModule)
+  },
+  {
+    path: 'mapas',
+    loadChildren: () => import('./pages/mapas/mapas.module').then( m => m.MapasPageModule)
+  },
+  {
+    path: 'fotografia',
+    loadChildren: () => import('./pages/fotografia/fotografia.module').then( m => m.FotografiaPageModule)
+  },
+  {
+    path: 'llamadas',
+    loadChildren: () => import('./pages/llamadas/llamadas.module').then( m => m.LlamadasPageModule)
+  },
+  {
+    path: 'slides',
+    loadChildren: () => import('./pages/slides/slides.module').then( m => m.SlidesPageModule)
   },
 ];
 

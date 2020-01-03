@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>fotografia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="takeSnap()">
+    Toma una fotografia
+  </ion-button>
+ 
+  <img [src]="capturedSnapURL" />
+</ion-content>

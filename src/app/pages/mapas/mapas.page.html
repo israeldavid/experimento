@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>mapas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="verUbicacion()" color="primary ">Ver el mapa</ion-button>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-button (click)="checkGPSPermission()">
+          Solicitar GPS Precision
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Longitude</ion-col>
+      <ion-col> {{locationCoords.longitude}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Latitude</ion-col>
+      <ion-col>{{locationCoords.latitude}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Accuracy</ion-col>
+      <ion-col>{{locationCoords.accuracy}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Timestamp</ion-col>
+      <ion-col>{{locationCoords.timestamp | date:'medium'}}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
