@@ -26,10 +26,10 @@ import { Camera } from '@ionic-native/camera/ngx';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 //Uso para las analiticas de Google
 import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
-import { SlidesPipe } from './pages/slides.pipe';
+
 
 @NgModule({
-  declarations: [AppComponent, SlidesPipe],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule,AuthModule],
   providers: [

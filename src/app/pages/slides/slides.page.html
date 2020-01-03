@@ -1,13 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>slides</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-slides [options]="slideOptsOne" #slideWithNav  (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
-    <ion-slide *ngFor="let s of sliderOne.slidesItems">
-        <img src="../../assets/images/{{s.id}}.jpg">
-     </ion-slide>
- </ion-slides>
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let slide of slides" class="slide-1">
+      <img [src]="slide.img">
+    </ion-slide>
+  </ion-slides>
 </ion-content>
