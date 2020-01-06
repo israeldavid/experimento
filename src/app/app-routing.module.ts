@@ -47,6 +47,18 @@ const routes: Routes = [
     path: 'slides',
     loadChildren: () => import('./pages/slides/slides.module').then( m => m.SlidesPageModule)
   },
+  {
+    path: 'calendario',
+    loadChildren: () => import('./pages/calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },
+  {
+    path: 'contactos',
+    loadChildren: () => import('./pages/contactos/contactos.module').then( m => m.ContactosPageModule)
+  },
+  {
+    path: 'archivos',
+    loadChildren: () => import('./pages/archivos/archivos.module').then( m => m.ArchivosPageModule)
+  },
 ];
 
 @NgModule({

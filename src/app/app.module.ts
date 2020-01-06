@@ -26,7 +26,12 @@ import { Camera } from '@ionic-native/camera/ngx';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 //Uso para las analiticas de Google
 import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
-
+//Uso del Calendario
+import { Calendar } from '@ionic-native/calendar/ngx';
+//Uso de los contactos
+import { Contacts } from '@ionic-native/contacts/ngx';
+//Uso del sistema de archivos
+import { File } from '@ionic-native/file/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -41,6 +46,9 @@ import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
     CallNumber,
     GoogleAnalytics,
     Camera,
+    Calendar,
+    Contacts,
+    File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {
       provide: HTTP_INTERCEPTORS,
