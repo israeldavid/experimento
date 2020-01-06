@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-archivos',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArchivosPage implements OnInit {
 
-  constructor() { }
+  constructor(private archivos : File) { }
 
   ngOnInit() {
+  }
+
+  validarCarpeta(){
+    this.archivos.checkDir(this.archivos.dataDirectory, 'mydir').then(_ =>
+      console.log('Directorio ya existe')).catch(err =>
+      console.log('Directorio no existe'));
   }
 
 }
