@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './slides.page.html',
   styleUrls: ['./slides.page.scss'],
 })
+
 export class SlidesPage implements OnInit {
 
   slides:{img:string, titulo:string, descripcion:string } [] = 

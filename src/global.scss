@@ -24,3 +24,83 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.contenedor{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(rgb(187, 187, 187), #eaeaeb);
+    height: 100vh;
+}
+
+.login-box {
+  width: 320px;
+  height: 420px;
+  /* background: #bebebe; */
+  background: whitesmoke;
+  color: #616161;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
+.login-box .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.login-box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  color: #696969;
+  font-size: 22px;
+}
+
+.loginbox .etiqueta{
+  margin: 0;
+  padding: 0;
+  color: #262626;
+  font-weight: bold;
+  display: block;
+}
+
+.login-box ion-input {
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid rgb(94, 94, 94);
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: rgb(78, 78, 78);
+  font-size: 16px;
+}
+
+.botonLogin {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #31A4A1;
+  color: #262626;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.login-box a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color:#262626;
+}
+
+.login-box a:hover {
+  color: rgb(129, 2, 2);
+}

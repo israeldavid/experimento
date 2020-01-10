@@ -59,6 +59,14 @@ const routes: Routes = [
     path: 'archivos',
     loadChildren: () => import('./pages/archivos/archivos.module').then( m => m.ArchivosPageModule)
   },
+  {
+    path: 'logind',
+    loadChildren: () => import('./pages/logind/logind.module').then( m => m.LogindPageModule)
+  },
+  {
+    path: 'olvide',
+    loadChildren: () => import('./pages/olvide/olvide.module').then( m => m.OlvidePageModule)
+  },
 ];
 
 @NgModule({
