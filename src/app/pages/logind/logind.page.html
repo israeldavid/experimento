@@ -3,12 +3,20 @@
     <div class="login-box">
       <img src="../../../assets/img/logo.png" class="avatar" alt="iRoute Template">
       <h1>Pharma 24/7</h1>
-      <ion-label class="etiqueta">Usuario</ion-label>
-      <ion-input placeholder="Su usuario"></ion-input>
-      <ion-label class="etiqueta">Clave</ion-label>
-      <ion-input type="password"></ion-input>
-      <ion-button expand="full" shape="round" color="success">Login</ion-button>
-      <div class="ion-text-center"><a href="#">Olvidaste la Clave?</a></div>
+      <form [formGroup]="loginForm">
+        <ion-label class="etiqueta">Usuario</ion-label>
+        <ion-input formControlName="usuario" placeholder="Su usuario" [class.invalid]="!loginForm.controls.usuario.valid && (loginForm.controls.usuario.dirty || submitAttempt)"></ion-input>
+        <ion-item *ngIf="!loginForm.controls.usuario.valid  && (loginForm.controls.usuario.dirty || submitAttempt)">
+          <p>{{ errorPersonalizados[0] }} </p>
+        </ion-item>
+        <ion-label class="etiqueta">Clave</ion-label>
+        <ion-input formControlName="password" type="password" [class.invalid]="!loginForm.controls.password.valid && (loginForm.controls.password.dirty || submitAttempt)"></ion-input>
+        <ion-item *ngIf="!loginForm.controls.password.valid  && (loginForm.controls.password.dirty || submitAttempt)">
+          <p>{{ errorPersonalizados[2] }}</p>
+        </ion-item>
+        <ion-button expand="full" shape="round" color="success" (click)="enviarLogin()">Login</ion-button>
+      </form>
+      <div class="ion-text-center"><a routerLink="/olvide">Olvidaste la Clave?</a></div>
     </div>
   </div>
 </ion-content>

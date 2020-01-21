@@ -5,8 +5,19 @@
       <h1>Pharma 24/7</h1>
       <h3 class="ion-text-center">No Encuentras tu contraseña?</h3>
       <p class="ion-text-center">No te preocupes, nos sucede a todos, ingresa tu Email y te ayudaremos.</p>
-      <ion-input placeholder="Email" type="email"></ion-input>
-      <ion-button expand="full" shape="round" color="success">Solicitar</ion-button>
+      <form [formGroup]="olvideForm">
+
+        <p *ngIf="submitAttempt" style="color: #ea6153;">Por favor llena los datos adecuadamente.</p>
+
+        <ion-input formControlName="email" placeholder="Email" type="email" [class.invalid]="!olvideForm.controls.email.valid && (olvideForm.controls.email.dirty || submitAttempt)"></ion-input>
+        <ion-button expand="full" shape="round" color="success" (click)="enviarClave()">Solicitar</ion-button>
+
+        <ion-item *ngIf="!olvideForm.controls.email.valid  && (olvideForm.controls.email.dirty || submitAttempt)">
+          <p>{{ errorPersonalizados[1] }}</p>
+        </ion-item>
+
+      </form>
+      <div class="ion-text-center"><a routerLink="/logind">Regresar</a></div>
     </div>
   </div>
 </ion-content>

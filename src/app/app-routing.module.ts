@@ -67,6 +67,10 @@ const routes: Routes = [
     path: 'olvide',
     loadChildren: () => import('./pages/olvide/olvide.module').then( m => m.OlvidePageModule)
   },
+  {
+    path: 'estadoconexion',
+    loadChildren: () => import('./pages/estadoconexion/estadoconexion.module').then( m => m.EstadoconexionPageModule)
+  },
 ];
 
 @NgModule({

@@ -32,7 +32,7 @@ import { Calendar } from '@ionic-native/calendar/ngx';
 import { Contacts } from '@ionic-native/contacts/ngx';
 //Uso del sistema de archivos
 import { File } from '@ionic-native/file/ngx';
-
+import { Network } from '@ionic-native/network/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -48,6 +48,7 @@ import { File } from '@ionic-native/file/ngx';
     Camera,
     Calendar,
     Contacts,
+    Network,
     File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {
