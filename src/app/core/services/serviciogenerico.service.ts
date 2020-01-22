@@ -1,3 +1,5 @@
+//Ojo este servicio se llama serviciobanner
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment} from '../../../environments/environment';
@@ -16,5 +18,4 @@ export class ServiciogenericoService {
   obtenerBanners():Observable<responseBanner> {
     return this.httpService.get<responseBanner>(url);
   }
-
 }

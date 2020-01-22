@@ -17,7 +17,8 @@ import { HttpConfigInterceptor } from '../app/core/interceptors/httpConfig.inter
 import { AuthModule } from '../app/core/authentication/auth.module';
 //Para usar el maps
 import { Geolocation } from '@ionic-native/geolocation/ngx';
-//PAra los permisos de Android
+
+//Para los permisos de Android
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
 //Uso de la cámara
@@ -33,6 +34,8 @@ import { Contacts } from '@ionic-native/contacts/ngx';
 //Uso del sistema de archivos
 import { File } from '@ionic-native/file/ngx';
 import { Network } from '@ionic-native/network/ngx';
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

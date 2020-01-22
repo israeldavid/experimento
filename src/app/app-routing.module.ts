@@ -71,6 +71,22 @@ const routes: Routes = [
     path: 'estadoconexion',
     loadChildren: () => import('./pages/estadoconexion/estadoconexion.module').then( m => m.EstadoconexionPageModule)
   },
+  {
+    path: 'banners',
+    loadChildren: () => import('./pages/banners/banners.module').then( m => m.BannersPageModule)
+  },
+  {
+    path: 'menus',
+    loadChildren: () => import('./pages/menus/menus.module').then( m => m.MenusPageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'apicore',
+    loadChildren: () => import('./pages/apicore/apicore.module').then( m => m.ApicorePageModule)
+  }
 ];
 
 @NgModule({

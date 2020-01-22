@@ -9,7 +9,10 @@ export const environment = {
   imagenpopup_uno : '../../../../assets/img/50500.png',
   direccionLogin : 'http://localhost:3000',
 
-  direccionBanner:'http://localhost:52532/api/v1/Banners'
+  direccionBanner:'http://localhost:52532/api/v1/Banners',
+  direccionMenu:'http://localhost:52532/api/v1/Menu',
+  direccionTabs:'http://localhost:52532/api/v1/Tabs',
+  direccionSliders:'http://localhost:52532/api/v1/Sliders'
 };
 
 /*

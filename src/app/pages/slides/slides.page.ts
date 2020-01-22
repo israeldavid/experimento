@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+//Servicio de Slides
+import { ServicioslidersService} from '../../core/services/serviciosliders.service';
+import { sliders} from '../../core/interfaces/slides.interface';
 
 @Component({
   selector: 'app-slides',
@@ -7,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class SlidesPage implements OnInit {
+
+  responsesliders: sliders;
 
   slides:{img:string, titulo:string, descripcion:string } [] = 
   [

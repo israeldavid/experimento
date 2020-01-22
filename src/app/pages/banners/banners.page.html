@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>banners</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let banner of responsebanners?.banners">
+    <ion-label>
+      <h2>{{banner.nombre}}</h2>
+    </ion-label>
+  </ion-item>
+  <h2>Cuántos Banners:</h2>{{responsebanners?.count}}
+</ion-content>

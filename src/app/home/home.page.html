@@ -18,14 +18,6 @@
   <ion-button expand="block" color="success" routerLink="/contactos">Contactos</ion-button>
   <ion-button expand="block" color="warning" routerLink="/archivos">Archivo</ion-button>
   <ion-button expand="block" color="success" routerLink="/estadoconexion">Conexion</ion-button>
-  <ion-button expand="block" color="tertiary" (click)="consultarBaners()">Banners</ion-button>
-
-  <ion-item *ngFor="let banner of responsebanners?.banners">
-    <ion-label>
-      <h2>{{banner.nombre}}</h2>
-    </ion-label>
-  </ion-item>
-  {{responsebanners?.count}}
-  
+  <ion-button expand="block" color="tertiary" routerLink="/apicore">Api Core</ion-button>
   
 </ion-content>
